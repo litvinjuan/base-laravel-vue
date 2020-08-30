@@ -16,3 +16,5 @@ yarn-error.log
 /.vscode
 /.idea
 .php_cs.cache
+cghooks.lock
+

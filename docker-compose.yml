@@ -11,7 +11,7 @@ volumes:
 services:
   db:
     image: mysql:latest
-    container_name: passwords-db
+    container_name: base-project-db
     restart: unless-stopped
     ports:
       - "3306:3306"
@@ -27,7 +27,7 @@ services:
 
   mail:
     image: mailhog/mailhog:latest
-    container_name: passwords-mail
+    container_name: base-project-mail
     ports:
       - "1025:1025"
       - "8025:8025"
@@ -36,7 +36,7 @@ services:
 
   redis:
     image: redis:alpine
-    container_name: passwords-redis
+    container_name: base-project-redis
     ports:
       - "6379:6379"
     networks:
